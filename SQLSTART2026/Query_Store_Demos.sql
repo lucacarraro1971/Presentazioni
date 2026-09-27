@@ -53,11 +53,7 @@ GO
     cardinality bucket — routing each execution to the right one.
 
     In Query Store this shows up as extra queries you never wrote, carrying
-    OPTION (PLAN PER VALUE(... predicate_range(...) ...)).
-
-    It is excellent in production and RUINS the classic sniffing demo, because
-    the whale and the minnow quietly get different plans. Turn it off for
-    demos 2, 2b and 3, then turn it back on for the bonus demo 2c.          */
+    OPTION (PLAN PER VALUE(... predicate_range(...) ...)).                */
 SELECT compatibility_level FROM sys.databases WHERE name = 'QueryStoreDemo';
 --SELECT name, value FROM sys.database_scoped_configurations
 --WHERE  name = 'PARAMETER_SENSITIVE_PLAN_OPTIMIZATION';
